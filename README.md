@@ -63,6 +63,21 @@ This project was architected by **Matheus Pereira** (author of the **DREAM** and
     python main.py
     ```
 
+## 🏗️ Architecture
+
+The project follows a **Modular Component-Based Architecture**, utilizing `discord.py`'s Cogs system to ensure Separation of Concerns (SoC).
+
+### Directory Structure
+* **`cogs/` (Controllers):** Handles command routing and event listeners, segmented by domain (NPCs, Players, Admin).
+* **`view/` & `modals/` (Presentation):** Manages User Interface components (Buttons, Dropdowns, Forms). Decoupled from business logic.
+* **`utils/` (Business Logic):** Pure Python functions for dice rolling, math, and parsing. Independent of the Discord API context.
+* **`locales/` (i18n):** JSON-based translation files ensuring the bot is locale-agnostic.
+
+### Design Patterns Used
+* **Event-Driven:** Non-blocking logic flow based on Discord Gateway events.
+* **Dependency Injection:** Shared utilities are injected into Cogs.
+* **Factory Pattern:** Used in `view_base_builder.py` to dynamically generate UI elements.
+
 ## 🤝 Contributing
 
 We welcome contributions! Whether you are a developer, a game designer, or a writer.

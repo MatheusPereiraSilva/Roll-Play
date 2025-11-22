@@ -18,6 +18,7 @@ The immediate focus is to ensure the code base supports multiple locales and is 
     - Full support for **Portuguese (PT-BR)** and **English (EN-US)**.
     - Dynamic loading system for translation strings.
     - Automatic locale detection based on server settings.
+    - Refactoring: Standardize naming conventions (Models vs Modals)
 
 ## 🛡️ v1.1 - The Campaign Manager (Scope Management)
 Implementation of the "Isolated Session" concept. The bot must be capable of managing multiple contexts within the same server.
